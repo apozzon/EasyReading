@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22113.1" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22089"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="EasyReading" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Reg-kF-x9C">
+                                <rect key="frame" x="20" y="748" width="219" height="32"/>
+                                <segments>
+                                    <segment title="Auto"/>
+                                    <segment title="IT"/>
+                                    <segment title="EN"/>
+                                    <segment title="FR"/>
+                                    <segment title="ES"/>
+                                </segments>
+                            </segmentedControl>
+                            <textView autoresizesSubviews="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" usesAttributedText="YES" allowsEditingTextAttributes="YES" findInteractionEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fRS-I7-jH0">
+                                <rect key="frame" x="20" y="89" width="374" height="639"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Text here">
+                                        <attributes>
+                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <font key="NSFont" size="18" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" enablesReturnKeyAutomatically="YES"/>
+                            </textView>
+                            <toolbar autoresizesSubviews="NO" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SvF-az-NlV">
+                                <rect key="frame" x="20" y="798" width="374" height="44"/>
+                                <items>
+                                    <barButtonItem title="    Open" image="filemenu.and.selection" catalog="system" style="plain" id="j93-nl-uGi">
+                                        <connections>
+                                            <action selector="fileRetrieve:" destination="BYZ-38-t0r" id="XOI-uW-Yzj"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="  " style="plain" id="mmo-ad-3vD"/>
+                                    <barButtonItem image="arrowtriangle.forward.fill" catalog="system" style="plain" id="YnH-1y-0Wo">
+                                        <connections>
+                                            <action selector="startReading:" destination="BYZ-38-t0r" id="k95-rg-GLk"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title=" " style="plain" id="UGh-Bi-PeW"/>
+                                    <barButtonItem title="    " image="pause.fill" catalog="system" style="plain" id="yNO-7F-N3B" userLabel="Pause">
+                                        <connections>
+                                            <action selector="pause:" destination="BYZ-38-t0r" id="CA2-Qn-xnd"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="   " style="plain" id="9Hy-dU-rfB"/>
+                                    <barButtonItem image="stop.fill" catalog="system" style="plain" id="Dby-7k-LZt">
+                                        <connections>
+                                            <action selector="stop:" destination="BYZ-38-t0r" id="hMP-Rw-fbN"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="   " style="plain" id="HfE-7a-oG1"/>
+                                    <barButtonItem image="eraser.fill" catalog="system" style="plain" id="sFb-i8-Al6">
+                                        <connections>
+                                            <action selector="eraseAll:" destination="BYZ-38-t0r" id="aPD-Gr-ccW"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UNMUTE!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lHR-62-97r">
+                                <rect key="frame" x="254" y="756.5" width="76" height="14"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="76" id="Hqe-TQ-R7H"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Xpx-73-D41">
+                                <rect key="frame" x="345" y="748" width="51" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="49" id="vgp-90-m2U"/>
+                                </constraints>
+                            </switch>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="fRS-I7-jH0" firstAttribute="trailing" secondItem="Xpx-73-D41" secondAttribute="trailing" id="3sQ-pY-sYO"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="SvF-az-NlV" secondAttribute="bottom" constant="20" id="4bW-sq-1eR"/>
+                            <constraint firstItem="fRS-I7-jH0" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="8No-hN-RHJ"/>
+                            <constraint firstItem="fRS-I7-jH0" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="41" id="AwI-Wr-uaY"/>
+                            <constraint firstItem="Reg-kF-x9C" firstAttribute="top" secondItem="fRS-I7-jH0" secondAttribute="bottom" constant="20" id="Hax-uO-rCG"/>
+                            <constraint firstItem="Reg-kF-x9C" firstAttribute="leading" secondItem="SvF-az-NlV" secondAttribute="leading" id="KlH-58-pee"/>
+                            <constraint firstItem="fRS-I7-jH0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Opd-oy-TAL"/>
+                            <constraint firstItem="lHR-62-97r" firstAttribute="leading" secondItem="Reg-kF-x9C" secondAttribute="trailing" constant="15" id="Upy-cn-Ufb"/>
+                            <constraint firstItem="lHR-62-97r" firstAttribute="centerY" secondItem="Xpx-73-D41" secondAttribute="centerY" id="c0y-PB-FKJ"/>
+                            <constraint firstItem="SvF-az-NlV" firstAttribute="top" secondItem="Reg-kF-x9C" secondAttribute="bottom" constant="19" id="dHv-wG-VYG"/>
+                            <constraint firstItem="Xpx-73-D41" firstAttribute="trailing" secondItem="SvF-az-NlV" secondAttribute="trailing" id="mk4-b6-Ibb"/>
+                            <constraint firstItem="fRS-I7-jH0" firstAttribute="leading" secondItem="Reg-kF-x9C" secondAttribute="leading" id="sVM-Zn-HW5"/>
+                            <constraint firstItem="Reg-kF-x9C" firstAttribute="top" secondItem="Xpx-73-D41" secondAttribute="top" id="sgd-zV-Ggc"/>
+                            <constraint firstItem="Xpx-73-D41" firstAttribute="leading" secondItem="lHR-62-97r" secondAttribute="trailing" constant="15" id="vFO-1G-RWc"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="detectedIdiom" destination="lHR-62-97r" id="Fx4-Wh-CdB"/>
+                        <outlet property="language" destination="Reg-kF-x9C" id="YjS-5u-iCM"/>
+                        <outlet property="saveFromLastRead" destination="Xpx-73-D41" id="DJQ-uB-Kau"/>
+                        <outlet property="textToRead" destination="fRS-I7-jH0" id="fM7-Ax-Gan"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="113.04347826086958" y="-28.125"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="arrowtriangle.forward.fill" catalog="system" width="128" height="113"/>
+        <image name="eraser.fill" catalog="system" width="128" height="119"/>
+        <image name="filemenu.and.selection" catalog="system" width="128" height="93"/>
+        <image name="pause.fill" catalog="system" width="117" height="128"/>
+        <image name="stop.fill" catalog="system" width="128" height="113"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

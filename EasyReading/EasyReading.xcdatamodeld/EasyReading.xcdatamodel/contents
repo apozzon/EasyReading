@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="22158.8" systemVersion="23C5041e" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithSwiftData="YES" userDefinedModelVersionIdentifier="">
+    <entity name="LastText" representedClassName="LastText" syncable="YES">
+        <attribute name="fromLastPoint" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="lastPosition" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="lastText" optional="YES" attributeType="String"/>
+    </entity>
+</model>
